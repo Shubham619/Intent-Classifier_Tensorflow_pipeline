@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\Nishali\\Documents\\UK\\31st May\\tutorial-tf-pipeline-master\\models\\current\\nlu_model\\component_5_EmbeddingIntentClassifier.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\Nishali\\Documents\\UK\\31st May\\tutorial-tf-pipeline-master\\models\\current\\nlu_model\\component_5_EmbeddingIntentClassifier.ckpt"

@@ -1,0 +1,89 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "Inquiry",
+        "text": "Hey, I want to know the price range of washing machines available at your store."
+      },
+      {
+        "intent": "Inquiry",
+        "text": "Do I need to register on your website for more details?"
+      },
+      {
+        "intent": "Inquiry",
+        "text": "What is the launch date of your xyz product."
+      },
+      {
+        "intent": "Inquiry",
+        "text": "Good morning  can we you please update the case no as completed."
+      },
+      {
+        "intent": "Inquiry",
+        "text": "Is there any progress on my current product?"
+      },
+      {
+        "intent": "Suggestion",
+        "text": "Improve the led colors. They look old school"
+      },
+      {
+        "intent": "Suggestion",
+        "text": "Delivery team should keep track of customers they are delivering."
+      },
+      {
+        "intent": "Suggestion",
+        "text": "Customers should get the message within 2-3 days of order not 5-7 days."
+      },
+      {
+        "intent": "Suggestion",
+        "text": "Warranty period should be increased from 12 month to 18 months."
+      },
+      {
+        "intent": "Suggestion",
+        "text": "Debit/credit cards offers can be made available to all."
+      },
+      {
+        "intent": "Satisfaction",
+        "text": "The service was nice and i loved it."
+      },
+      {
+        "intent": "Satisfaction",
+        "text": "Good performance by the delivery team. My flat was on top floor."
+      },
+      {
+        "intent": "Satisfaction",
+        "text": "Fab product. I am enjoying it."
+      },
+      {
+        "intent": "Satisfaction",
+        "text": "Thank you very much for fast delivery."
+      },
+      {
+        "intent": "Satisfaction",
+        "text": "Great efforts. I issue got resolved within two days."
+      },
+      {
+        "intent": "Problems",
+        "text": "Product not delivered.It's frustrating."
+      },
+      {
+        "intent": "Problems",
+        "text": "Delivery team not receiving the call. How unproffesional"
+      },
+      {
+        "intent": "Problems",
+        "text": "Product has dent on it. I informed but no reply. Cheap service."
+      },
+      {
+        "intent": "Problems",
+        "text": "Not happy with the process. It's too lenghtly and tedious"
+      },
+      {
+        "intent": "Problems",
+        "text": "Product is missing from the cart. I added to cart few hours ago. It's annoying."
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}
