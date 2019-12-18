@@ -1,0 +1,73 @@
+
+Stemming algorithms work by cutting off the end or the beginning of the word. (Excludes suffix studies-studi,studying-study)
+Lemitization on the other hand consider morphological analysis (structure) of the words. It takes base form of word, studying-study,studies-study
+Separate tags by comma.. total unique tags 164 which follows sequence in exam text
+
+
+If we pick random obeservation.
+
+Text- I always have great service whatever question I have is answered is answered promptly and professionally'
+Tag- 1. Customer Service - Overall Satisfaction
+	 2. Representative - Ability to Answer Questions
+	 3. Representative - Professionalism
+
+Tag vector is following the sequence of tags. We can conclude this is Context-dependent multi-label seq2seq problem.
+Seq2seq attention based model is developed by Google in 2014. Which is basically used for Langauge translation, text summarization and etc
+
+Parent classes- Customer Service, Representative,Website Features ,Account Communications and etc
+Child classes- Overall Satisfaction,Ability to Answer Questions, Professionalism,Online Chat, Statements and etc
+Each child class has one Parent class (such as Account Communications has Statements) whereas one Parent class can have multiple child class (such as Account Communications 
+has Statements, Notification, Online Chat and etc)
+
+Approaches which i used.
+1. Multi-class mechanism includes only Parent classes - around 32 classes (I combined some classes which were similar such as Mobile App, Mobile App security,
+   Mobile app features in One Parent class- as Mobile
+2. Multi-label seq2seq problem- 164 unique parent-child classes
+
+Modeling.
+set max_words size(no of most frequent words to be used)
+set max_len of text(post) 
+set embedding_size
+Tokenized the text
+
+
+Problem with Multi-label mechanism - When observations(rows) are less and features and more sparsity gets created for some observations while rest remain dense. 
+such as observations with tag= mobile security (which comes rare) whereas observation tag= 'Customer service-XYZ') which has maximum occurence. 
+To eliminate this problem, size of data matters a lot in neural networks.
+
+Why not general machine learning algorthims(logistic reg, onevsrest,nave bayes etc) using some embedding techniques (tf-idf,bag of words etc)
+Ans. The main reason for this was that the context of words was hard to follow when the words were broken down into sub-words 
+and the sequence in which the tokens for the sub-words appear becomes very important in understanding their meaning.
+
+With that in mind an update to RNNs is called LSTM, long short - term memory has been created. In addition to the context being Paaseed as it is in RNNs, 
+LSTMs have an additional pipeline of contexts called cell state. This can pass through the network to impact it. 
+This helps keep context from earlier tokens relevance in later ones so issues like the one that we just discussed can be avoided.
+
+ 
+ Irish describes the people, Gaelic describes the language. 
+ 
+ Sequential layer()
+ Sequential constructor of keras.
+  It allows you to easily stack sequential layers (and even recurrent layers) of the network in order from input to output. 
+  First layer word embedding layer . First argument it takes resultant embedding vector which we want and then length of input (no of steps/words in each sample)
+  Then bidirectional LSTM layer which is most important layer which takes one argument output desire (64 in this case) 
+  
+  
+  def relu(z):
+  return max(0, z)
+  
+  def sigmoid(z):
+  return 1.0 / (1 + np.exp(-z))
+  
+  
+  def softmax(inputs):
+    """
+    Calculate the softmax for the give inputs (array)
+    :param inputs:
+    :return:
+    """
+    return np.exp(inputs) / float(sum(np.exp(inputs)))
+	
+	1.loss function-binary_crossentropy--multilabel
+	2.cateforical_crossentrophy--multiclass
+	
