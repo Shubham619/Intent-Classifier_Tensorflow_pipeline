@@ -1,1 +1,40 @@
 python -m rasa_nlu.train -c config.yml --data data/nlu_data.md -o models --fixed_model_name nlu_model --project current --verbose
+
+
+
+
+
+thanks,
+regards,
+thanks and regards,
+kind regards,
+regards
+--------------- Original Message ---------------
+tel:
+cell:
+mobile:
+
+
+"Think before you print.This email may contain confidential and privileged material for the sole use of the intended recipient. Any review, use, distribution or disclosure by others is strictly prohibited. If you are not the intended recipient (or authorized to receive for the recipient), please contact the sender by reply email and delete all copies of this message.Please click here for Company Registration Information"
+Sent:
+From:
+Thanks!
+
+
+
+regards,
+regards
+kind regards,
+kind regards
+thanks,
+thanks
+thank you,
+thank you
+thanks and regards,
+thanks and regards
+--------------- Original Message ---------------
+from:
+tel:
+mobile:
+cell:
+
